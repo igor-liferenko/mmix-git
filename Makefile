@@ -98,3 +98,29 @@ mmotype: mmotype.c
 tarfile: $(ALL)
 	tar cvf /tmp/mmix.tar $(ALL)
 	gzip -9 /tmp/mmix.tar
+docs:
+sudo -u user mkdir /tmp/mmixdoc/
+cd /tmp/mmixdoc/
+sudo -u user cp /usr/local/cweb-git/cwebmac.tex .
+sudo -u user cp /usr/local/mmix-git/* .
+sudo -u user cweave mmixal.w >/dev/null
+sudo -u user cweave mmix-doc.w >/dev/null
+sudo -u user cweave mmix-sim.w >/dev/null
+sudo -u user tex mmixal.tex >/dev/null
+sudo -u user tex mmix-doc.tex >/dev/null
+sudo -u user tex mmix-sim.tex >/dev/null
+sudo -u user dvips mmixal.dvi -o /usr/local/share/mmixal.ps
+sudo -u user dvips mmix-doc.dvi -o /usr/local/share/mmix-doc.ps
+sudo -u user dvips mmix-sim.dvi -o /usr/local/share/mmix-sim.ps
+sudo -u user mkdir -p /usr/local/share/for_printing/
+sudo -u user cweave mmixal.w mmixal.dpl >/dev/null
+sudo -u user cweave mmix-doc.w mmix-doc.dpl >/dev/null
+sudo -u user cweave mmix-sim.w mmix-sim.dpl >/dev/null
+sudo -u user tex mmixal.tex >/dev/null
+sudo -u user tex mmix-doc.tex >/dev/null
+sudo -u user tex mmix-sim.tex >/dev/null
+sudo -u user dvips mmixal.dvi -o /usr/local/share/for_printing/mmixal_a4.ps
+sudo -u user dvips mmix-doc.dvi -o /usr/local/share/for_printing/mmix-doc_a4.ps
+sudo -u user dvips mmix-sim.dvi -o /usr/local/share/for_printing/mmix-sim_a4.ps
+cd -
+rm -fr /tmp/mmixdoc/
