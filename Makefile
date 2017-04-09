@@ -100,10 +100,10 @@ tarfile: $(ALL)
 	gzip -9 /tmp/mmix.tar
 
 scrn:
-	@cp /usr/local/cweb-git/cwebmac.tex .
-	@cweave mmixal.w >/dev/null
-	@cweave mmix-doc.w >/dev/null
-	@cweave mmix-sim.w >/dev/null
+	#NOTE: it is assumed that /usr/local/bin/dvips is used
+	@cw mmixal.w >/dev/null
+	@cw mmix-doc.w >/dev/null
+	@cw mmix-sim.w >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
@@ -112,10 +112,10 @@ scrn:
 	@dvips mmix-sim.dvi -o mmix-sim.ps
 
 prnt:
-	@cp /usr/local/cweb-git/cwebmac.tex .
-	@cweave mmixal.w mmixal.dpl >/dev/null
-	@cweave mmix-doc.w mmix-doc.dpl >/dev/null
-	@cweave mmix-sim.w mmix-sim.dpl >/dev/null
+	#NOTE: it is assumed that /usr/local/bin/dvips is used
+	@cw mmixal.w mmixal.dpl >/dev/null
+	@cw mmix-doc.w mmix-doc.dpl >/dev/null
+	@cw mmix-sim.w mmix-sim.dpl >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
