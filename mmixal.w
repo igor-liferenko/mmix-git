@@ -1,4 +1,3 @@
-\def\contentspagenumber{0}
 \let\lheader\rheader
 % This file is part of the MMIXware package (c) Donald E Knuth 1999
 @i boilerplate.w %<< legal stuff: PLEASE READ IT BEFORE MAKING ANY CHANGES!
