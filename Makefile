@@ -100,25 +100,23 @@ tarfile: $(ALL)
 	gzip -9 /tmp/mmix.tar
 
 scrn:
-	#NOTE: it is assumed that /usr/local/bin/dvips is used
 	@cw mmixal.w >/dev/null
 	@cw mmix-doc.w >/dev/null
 	@cw mmix-sim.w >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
-	@dvips mmixal.dvi -o mmixal.ps
-	@dvips mmix-doc.dvi -o mmix-doc.ps
-	@dvips mmix-sim.dvi -o mmix-sim.ps
+	@dvips -u /dev/null -q mmixal.dvi
+	@dvips -u /dev/null -q mmix-doc.dvi
+	@dvips -u /dev/null -q mmix-sim.dvi
 
 prnt:
-	#NOTE: it is assumed that /usr/local/bin/dvips is used
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
 	@cw mmix-sim.w mmix-sim.dpl >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
-	@dvips mmixal.dvi -o mmixal.ps
-	@dvips mmix-doc.dvi -o mmix-doc.ps
-	@dvips mmix-sim.dvi -o mmix-sim.ps
+	@dvips -u /dev/null -q mmixal.dvi
+	@dvips -u /dev/null -q mmix-doc.dvi
+	@dvips -u /dev/null -q mmix-sim.dvi
