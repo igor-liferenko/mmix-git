@@ -99,17 +99,6 @@ tarfile: $(ALL)
 	tar cvf /tmp/mmix.tar $(ALL)
 	gzip -9 /tmp/mmix.tar
 
-scrn:
-	@cw mmixal.w >/dev/null
-	@cw mmix-doc.w >/dev/null
-	@cw mmix-sim.w >/dev/null
-	@tex mmixal.tex >/dev/null
-	@tex mmix-doc.tex >/dev/null
-	@tex mmix-sim.tex >/dev/null
-	@dvips -u /dev/null -q mmixal.dvi
-	@dvips -u /dev/null -q mmix-doc.dvi
-	@dvips -u /dev/null -q mmix-sim.dvi
-
 prnt:
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
