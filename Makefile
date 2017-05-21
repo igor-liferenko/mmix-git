@@ -110,6 +110,7 @@ prnt:
 	@dvips -u /dev/null -q mmix-doc.dvi
 	@dvips -u /dev/null -q mmix-sim.dvi
 
-img:
+mmix.eps: mmix.mp
 	@mpost mmix.mp
-	@imgsize mmix.1
+	@mv mmix.1 mmix.eps
+	@imgsize mmix
