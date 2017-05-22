@@ -104,13 +104,8 @@ prnt:
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
 	@cw mmix-sim.w mmix-sim.dpl >/dev/null
 	@tex mmixal.tex >/dev/null
-	@tex -interaction batchmode mmix-doc.tex >/dev/null
+	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
 	@dvips -u /dev/null -q mmixal.dvi
 	@dvips -u /dev/null -q mmix-doc.dvi
 	@dvips -u /dev/null -q mmix-sim.dvi
-
-mmix.eps: mmix.mp
-	@mpost $<
-	@mv mmix.1 $@
-	@imgsize $@
