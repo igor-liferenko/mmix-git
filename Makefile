@@ -106,7 +106,7 @@ prnt:
 	@wget --quiet -nc https://raw.github.com/igor-liferenko/lhplain/master/lhplain.ini
 	@tex -ini -jobname tex lhplain.ini >/dev/null
 	@tex mmixal.tex >/dev/null
-	@tex -interaction batchmode mmix-doc.tex >/dev/null || echo run \"make mmix.eps\"; false
+	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
 	@dvips -t a4 -u /dev/null -q mmixal.dvi
 	@dvips -t a4 -u /dev/null -q mmix-doc.dvi

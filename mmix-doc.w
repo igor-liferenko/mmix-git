@@ -2620,7 +2620,8 @@ The local register slots l[0], l[1], \dots, l[511] act as a cyclic buffer with
 addresses that wrap around mod~512, so that $\l[512]=\l[0]$,
 $\l[513]=\l[1]$, etc. This buffer is divided into three parts by three
 pointers, which we will call $\alpha$, $\beta$, and $\gamma$.
-$$\hbox to4.9cm{\vbox to2.92cm{\vss\special{psfile=mmix.eps llx=-57 lly=-46 urx=82 ury=37 rwi=1390}}\hss}$$
+$$\hbox to4.9cm{\vbox to2.92cm{\vss\special{psfile=mmix.eps llx=-57 lly=-46 urx=82 ury=37
+rwi=1390}}\hss}$$
 Registers $\l[\alpha]$, $\l[\alpha+1]$, \dots,~$\l[\beta-1]$ are
 what program instructions currently call \$0, \$1, \dots,~$\$(\ll-1)$;
 registers $\l[\beta]$, $\l[\beta+1]$, \dots,~$\l[\gamma-1]$ are currently
