@@ -103,14 +103,16 @@ prnt:
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
 	@cw mmix-sim.w mmix-sim.dpl >/dev/null
+	@wget --quiet -nc https://raw.github.com/igor-liferenko/lhplain/master/lhplain.ini
+	@tex -ini -jobname tex lhplain.ini >/dev/null
 	@tex mmixal.tex >/dev/null
-	@tex -interaction batchmode mmix-doc.tex >/dev/null
+	@tex -interaction batchmode mmix-doc.tex >/dev/null || echo run \"make mmix.eps\"; false
 	@tex mmix-sim.tex >/dev/null
-	@dvips -u /dev/null -q mmixal.dvi
-	@dvips -u /dev/null -q mmix-doc.dvi
-	@dvips -u /dev/null -q mmix-sim.dvi
+	@dvips -t a4 -u /dev/null -q mmixal.dvi
+	@dvips -t a4 -u /dev/null -q mmix-doc.dvi
+	@dvips -t a4 -u /dev/null -q mmix-sim.dvi
 
 mmix.eps: mmix.mp
-	@mpost $<
+	@mpost $< >/dev/null
 	@mv mmix.1 $@
 	@imgsize $@
