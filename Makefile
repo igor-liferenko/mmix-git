@@ -100,7 +100,7 @@ tarfile: $(ALL)
 	gzip -9 /tmp/mmix.tar
 
 prnt:
-	@kpsewhich cwebmal.tex >/dev/null || ( echo ERROR: cwebmal.tex does not exist; false )
+	@kpsewhich cwebmal.tex >/dev/null || ( echo 'ERROR: cwebmal.tex does not exist (you may take it from cweb-git repo)'; false )
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
 	@cw mmix-sim.w mmix-sim.dpl >/dev/null
