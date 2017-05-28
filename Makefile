@@ -112,8 +112,7 @@ prnt:
 	@dvips -t a4 -u /dev/null -q mmixal.dvi
 	@dvips -t a4 -u /dev/null -q mmix-doc.dvi
 	@dvips -t a4 -u /dev/null -q mmix-sim.dvi
-	@lpoptions -o media=a4 -o sides=two-sided-long-edge
-	@echo everything is ready - use \"lp\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
+	@echo everything is ready - run \"lpoptions -o media=a4 -o sides=two-sided-long-edge\" and use \"lp\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
 
 mmix.eps: mmix.mp
 	@mpost $< >/dev/null
