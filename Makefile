@@ -114,6 +114,8 @@ prnt:
 	@dvips -t a4 -u /dev/null -q mmix-sim.dvi
 	@echo everything is ready - run \"lpoptions -o media=a4 -o sides=two-sided-long-edge\" and use \"lp\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
 
+.PHONY: $(wildcard *.eps)
+
 mmix.eps: mmix.mp
 	@mpost $< >/dev/null
 	@mv mmix.1 $@
