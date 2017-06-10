@@ -99,7 +99,7 @@ tarfile: $(ALL)
 	tar cvf /tmp/mmix.tar $(ALL)
 	gzip -9 /tmp/mmix.tar
 
-prnt:
+prt:
 	@kpsewhich cwebmal.tex >/dev/null || ( echo 'ERROR: cwebmal.tex does not exist (you may take it from cweb-git repo)'; false )
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
@@ -112,7 +112,7 @@ prnt:
 	@dvips -t a4 -u /dev/null -q mmixal.dvi
 	@dvips -t a4 -u /dev/null -q mmix-doc.dvi
 	@dvips -t a4 -u /dev/null -q mmix-sim.dvi
-	@echo everything is ready - run \"lpoptions -o media=a4 -o sides=two-sided-long-edge\" and use \"lp -o raw\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
+	@echo everything is ready - use \"lpr -o raw\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
 
 .PHONY: $(wildcard *.eps)
 
