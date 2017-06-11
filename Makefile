@@ -104,15 +104,10 @@ print:
 	@cw mmixal.w mmixal.dpl >/dev/null
 	@cw mmix-doc.w mmix-doc.dpl >/dev/null
 	@cw mmix-sim.w mmix-sim.dpl >/dev/null
-	@wget --quiet -nc https://raw.github.com/igor-liferenko/lhplain/master/lhplain.ini
-	@tex -ini -jobname tex lhplain.ini >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
-	@dvips -Pduplex -t a4 -u /dev/null -q mmixal.dvi
-	@dvips -Pduplex -t a4 -u /dev/null -q mmix-doc.dvi
-	@dvips -Pduplex -t a4 -u /dev/null -q mmix-sim.dvi
-	@echo everything is ready - use \"lpr\" for printing mmixal.ps, mmix-doc.ps and mmix-sim.ps
+	@echo everything is ready - use \"prt mmixal\", \"prt mmix-doc\" and \"prt mmix-sim\"
 
 .PHONY: $(wildcard *.eps)
 
