@@ -100,9 +100,9 @@ tarfile: $(ALL)
 	gzip -9 /tmp/mmix.tar
 
 print:
-	@cweave mmixal.w mmixal.dpl >/dev/null
-	@cweave mmix-doc.w mmix-doc.dpl >/dev/null
-	@cweave mmix-sim.w mmix-sim.dpl >/dev/null
+	@cweave mmixal mmixal >/dev/null
+	@cweave mmix-doc mmix-doc >/dev/null
+	@cweave mmix-sim mmix-sim >/dev/null
 	@tex mmixal.tex >/dev/null
 	@tex mmix-doc.tex >/dev/null
 	@tex mmix-sim.tex >/dev/null
