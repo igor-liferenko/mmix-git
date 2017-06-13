@@ -103,9 +103,9 @@ print:
 	@cweave mmixal mmixal >/dev/null
 	@cweave mmix-doc mmix-doc >/dev/null
 	@cweave mmix-sim mmix-sim >/dev/null
-	@tex mmixal.tex >/dev/null
-	@tex mmix-doc.tex >/dev/null
-	@tex mmix-sim.tex >/dev/null
+	@tex mmixal >/dev/null
+	@tex mmix-doc >/dev/null
+	@tex mmix-sim >/dev/null
 	@echo everything is ready - use \"prt mmixal\", \"prt mmix-doc\" and \"prt mmix-sim\"
 
 .PHONY: $(wildcard *.eps)
