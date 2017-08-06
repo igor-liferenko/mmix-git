@@ -106,7 +106,7 @@ print:
 	@tex mmixal >/dev/null
 	@tex mmix-doc >/dev/null
 	@tex mmix-sim >/dev/null
-	@echo everything is ready - use \"prt [ -pp -1-13 ] mmixal\", \"prt mmix-doc\" and \"prt [ -pp -1-8 ] mmix-sim\"
+	@echo everything is ready - use \"prt [ -pp 1-13 ] mmixal\", \"prt mmix-doc\" and \"prt [ -pp 1-8 ] mmix-sim\"
 
 .PHONY: $(wildcard *.eps)
 
