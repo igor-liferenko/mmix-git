@@ -54,7 +54,6 @@ with the help of the `rpmbuild` and `debbuild` utilities respectively.
 * Advanced build script `mmix.spec` for rpm and deb packaging
 * Modified `Makefile` for target optimization
 * Use C99/C++ types `bool`, `uint8_t` and `uint32_t`
-* Extract shared object `libmmix.so` for general use
 
 ## Postscript
 
