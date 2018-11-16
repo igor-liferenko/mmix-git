@@ -113,5 +113,4 @@ print:
 
 mmix.eps: mmix.mp
 	@mpost $< >/dev/null
-	@mv mmix.1 $@
 	@imgsize $@

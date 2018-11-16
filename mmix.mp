@@ -1,5 +1,7 @@
 % illustrations for mmix.w
 
+outputtemplate := "%j.eps";
+
 beginfig(1)
 numeric r; r=.5in; % radius of circle
 numeric rr; rr=.9in; % radius of arc
