@@ -1,5 +1,6 @@
 % illustrations for mmix.w
 
+prologues := 3;
 outputtemplate := "%j.eps";
 
 beginfig(1)
