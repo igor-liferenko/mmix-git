@@ -108,9 +108,3 @@ print:
 	@tex mmix-sim >/dev/null
 	@touch -d '-5 seconds' mmixal.tex mmix-doc.tex mmix-sim.tex # for 'test' in prt.fn
 	@echo everything is ready - use \"prt [ -pp 1:13 mmixal; prt -pp -1:0 ] mmixal\", \"prt mmix-doc\" and \"prt [ -pp 1:8 mmix-sim; prt -pp -1:0 ] mmix-sim\"
-
-.PHONY: $(wildcard *.eps)
-
-mmix.eps: mmix.mp
-	@mpost $< >/dev/null
-	@imgsize $@
